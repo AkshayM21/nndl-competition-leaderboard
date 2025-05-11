@@ -1,0 +1,72 @@
+# Dependencies
+/node_modules
+/src/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Production
+/build
+/src/build
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+firebase-backend/.env
+
+#testdata
+firebase-backend/test_data.csv
+
+# Firebase
+firebase-debug.log
+firebase-credentials.json
+*firebase-credentials*.json
+.firebaserc
+.firebase/
+.runtimeconfig.json
+
+# Sensitive data
+*.key
+*.pem
+*.p12
+secrets/
+credential*.json
+
+# Misc
+.DS_Store
+.vscode/
+.idea/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

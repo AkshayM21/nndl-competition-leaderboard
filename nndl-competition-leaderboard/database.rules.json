@@ -1,0 +1,23 @@
+{
+    "rules": {
+      ".read": "auth != null && (auth.token.email.endsWith('@columbia.edu') || auth.token.email.endsWith('@barnard.edu'))",
+      "submissions": {
+        ".write": "auth != null && (auth.token.email.endsWith('@columbia.edu') || auth.token.email.endsWith('@barnard.edu'))",
+        "$submission_id": {
+          ".write": "auth != null && (auth.token.email.endsWith('@columbia.edu') || auth.token.email.endsWith('@barnard.edu'))",
+          ".validate": "!data.exists() || newData.child('teamName').val() != 'Baseline' || auth.token.email == 'am5747@columbia.edu'"
+        },
+        ".indexOn": [
+        "metrics/superAccuracy",
+        "metrics/seenSuperAccuracy",
+        "metrics/unseenSuperAccuracy",
+        "metrics/subAccuracy",
+        "metrics/seenSubAccuracy",
+        "metrics/unseenSubAccuracy",
+        "teamName",
+        "modelName",
+        "submissionTime"
+      ]
+      }
+    }
+  }

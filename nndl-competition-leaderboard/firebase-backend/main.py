@@ -29,8 +29,8 @@ else:
 
 # Initialize the app with appropriate configuration
 app = initialize_app(cred, {
-    'databaseURL': os.environ.get('APP_FIREBASE_DATABASE_URL', 'https://nndl-course-leaderboard-default-rtdb.firebaseio.com'),
-    'storageBucket': os.environ.get('APP_FIREBASE_STORAGE_BUCKET', 'nndl-course-leaderboard.firebasestorage.app')
+    'databaseURL': os.environ.get('APP_FIREBASE_DATABASE_URL'),
+    'storageBucket': os.environ.get('APP_FIREBASE_STORAGE_BUCKET')
 })
 
 cors_options = options.CorsOptions(
